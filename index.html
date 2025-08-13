@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карточная игра 21</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+    <div class="block-1 container">
+        <div class="description">
+            <p class="game-name">
+                Карточная игра <span class="number"> 21 </span>
+            </p>
+        </div>
+        <button class="start-game" type="button">
+            Начать
+        </button>
+    </div>
+    <div class="game__form container hidden">
+        <form class="form container hidden">
+            <h1 class="game__radio-title">Противник</h1>
+            <div class="game__opponent-wrapper">
+                <div class="radio__opponent">
+                    <div class="opponent__Artem opponent"></div>
+                    <input type="radio" class="opponent__select" id="radio-Artem" name="opponent" value="Artem" checked>
+                    <label for="radio-Artem" class="small-radio">Артём</label>
+                </div>
+                <div class="radio__opponent">
+                    <div class="opponent__Denis opponent"></div>
+                    <input type="radio" class="opponent__select" id="radio-Denis" name="opponent" value="Denis">
+                    <label for="radio-Denis" class="small-radio">Денис</label>
+                </div>
+                <div class="radio__opponent">
+                    <div class="opponent__Pavel opponent"></div>
+                    <input type="radio" class="opponent__select" id="radio-Pavel" name="opponent" value="Pavel">
+                    <label for="radio-Pavel" class="small-radio">Павел</label>
+                </div>
+            </div>
+            <input type="text" class="game__get-name" placeholder="Введите ваше имя" required>
+            <h1 class="game__radio-title">Рубашка</h1>
+            <div class="flex-wrapper">
+                <div class="radio__card">
+                    <div class="suit suit-classic"></div>
+                    <input type="radio" class="game__get-suit" id="radio-classic" name="suit" value="classic">
+                    <label for="radio-classic" class="small-radio">Классик</label>
+                </div>
+                <div class="radio__card">
+                    <div class="suit suit-strada"></div>
+                    <input type="radio" class="game__get-suit" id="radio-strada" name="suit" value="strada" checked>
+                    <label for="radio-strada" class="small-radio">Strada</label>
+
+                </div>
+
+            </div>
+            <button class="lets-game" type="submit">Играть</button>
+
+
+        </form>
+    </div>
+
+    <div class="game__interface container hidden">
+
+        <div class="game__table">
+            <div class="game__computer">
+                <div class="opponent-wrapper">
+                    <h2 class="computer__title">Компьютер</h2>
+                    <div class="game__opponent-img"></div>
+                </div>
+                <div class="computer__info">
+
+                    <div class="computer__balance">Баланс: <span>1000$</span></div>
+
+                    <div class="computer__bet">Ставка: <span></span></div>
+                </div>
+            </div>
+            <div class="computer__layout-wrapper">
+                <div class="computer__counter"></div>
+                <div class="computer__layout"></div>
+            </div>
+            <div class="bet__and__deck__wrapper">
+                <div class="bet">Ставка: <span></span></div>
+                <div class="deck"><img src="./images/deck.svg" alt="" class="current_deck"></div>
+            </div>
+            <div class="user__layout-wrapper">
+                <div class="user__counter"></div>
+                <div class="user__layout"></div>
+            </div>
+            <div class="game__user">
+                <h2 class="user__title">Юзер</h2>
+                <div class="user__info">
+
+                    <div class="user__balance">Баланс: <span>1000$</span></div>
+
+                    <div class="user__bet">Ставка: <span></span><button class="button__minus" type="button"><img
+                                src="./icons/minus-svgrepo-com (1).svg" alt=""></button><button class="button__plus"
+                            type="button"><img src="./icons/plus-svgrepo-com.svg" alt=""></button></div>
+                    <div class="game__buttons"><button class="play" type="button">Играть</button><button class="more"
+                            type="button" disabled="disabled">Еще</button><button class="pass" type="button"
+                            disabled="disabled">Пас</button></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="./scripts/main.js" type="module"></script>
+</body>
+
+</html>
